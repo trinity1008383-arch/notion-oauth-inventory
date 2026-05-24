@@ -287,6 +287,7 @@ export default async function handler(req, res) {
             <option value="">-- 選擇 --</option>
             <option value="留下">留下</option>
             <option value="評估">評估</option>
+            <option value="待出售">待出售</option>
             <option value="進垃圾桶">進垃圾桶</option>
           </select>
         </div>
