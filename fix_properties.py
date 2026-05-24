@@ -56,9 +56,9 @@ update_property('分類', {
 update_property('狀態', {
     'select': {
         'options': [
-            {'name': '正常', 'color': 'green'},
-            {'name': '損壞', 'color': 'red'},
-            {'name': '遺失', 'color': 'gray'}
+            {'name': '留下', 'color': 'green'},
+            {'name': '評估', 'color': 'yellow'},
+            {'name': '進垃圾桶', 'color': 'red'}
         ]
     }
 })

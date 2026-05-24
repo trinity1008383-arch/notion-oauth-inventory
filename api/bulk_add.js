@@ -281,9 +281,9 @@ export default async function handler(req, res) {
           <label>狀態</label>
           <select id="status">
             <option value="">-- 選擇 --</option>
-            <option value="正常">正常</option>
-            <option value="損壞">損壞</option>
-            <option value="遺失">遺失</option>
+            <option value="留下">留下</option>
+            <option value="評估">評估</option>
+            <option value="進垃圾桶">進垃圾桶</option>
           </select>
         </div>
         <div>

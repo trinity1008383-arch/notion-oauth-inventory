@@ -104,7 +104,7 @@ if __name__ == '__main__':
         name='郵票',
         location='房間/櫃/多利箱子01',
         category='郵票',
-        status='正常',
+        status='留下',
         quantity=5,
         notes='一般郵票'
     )
