@@ -271,7 +271,11 @@ export default async function handler(req, res) {
         </div>
         <div>
           <label>位置</label>
-          <input type="text" id="location" placeholder="例：房間、櫃子">
+          <select id="location">
+            <option value="">-- 選擇 --</option>
+            <option value="房間">房間</option>
+            <option value="工作室">工作室</option>
+          </select>
         </div>
         <div>
           <label>分類</label>
