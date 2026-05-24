@@ -272,8 +272,7 @@ export default async function handler(req, res) {
         <div>
           <label>位置</label>
           <select id="location">
-            <option value="">-- 選擇 --</option>
-            <option value="房間">房間</option>
+            <option value="房間" selected>房間</option>
             <option value="工作室">工作室</option>
           </select>
         </div>
@@ -284,8 +283,7 @@ export default async function handler(req, res) {
         <div>
           <label>狀態</label>
           <select id="status">
-            <option value="">-- 選擇 --</option>
-            <option value="留下">留下</option>
+            <option value="留下" selected>留下</option>
             <option value="評估">評估</option>
             <option value="待出售">待出售</option>
             <option value="進垃圾桶">進垃圾桶</option>
