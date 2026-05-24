@@ -89,57 +89,62 @@ export default async function handler(req, res) {
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: #f3f1ed;
       min-height: 100vh;
-      padding: 20px;
+      padding: 40px 20px;
     }
     .container {
       max-width: 900px;
       margin: 0 auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      background: #faf9f7;
+      border-radius: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
       padding: 40px;
     }
     h1 {
-      color: #333;
-      margin-bottom: 10px;
-      font-size: 28px;
+      color: #3a3a3a;
+      margin-bottom: 8px;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
     }
     .subtitle {
-      color: #666;
-      margin-bottom: 30px;
-      font-size: 14px;
+      color: #7a7a7a;
+      margin-bottom: 32px;
+      font-size: 13px;
+      font-weight: 300;
     }
     .form-group {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-bottom: 20px;
-      padding: 20px;
-      background: #f8f9fa;
-      border-radius: 8px;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding: 24px;
+      background: #f7f5f2;
+      border-radius: 0;
+      border: 1px solid #e8e5e0;
     }
     label {
       display: block;
-      font-weight: 600;
+      font-weight: 500;
       margin-bottom: 8px;
-      color: #333;
-      font-size: 13px;
+      color: #000;
+      font-size: 12px;
+      letter-spacing: 0.3px;
     }
     input, select, textarea {
       width: 100%;
-      padding: 10px;
-      border: 2px solid #e0e0e0;
-      border-radius: 6px;
-      font-size: 14px;
+      padding: 10px 12px;
+      border: 1px solid #d0d0d0;
+      border-radius: 0;
+      font-size: 13px;
       font-family: inherit;
-      transition: border-color 0.3s;
+      background: white;
+      transition: border-color 0.2s;
     }
     input:focus, select:focus, textarea:focus {
       outline: none;
-      border-color: #667eea;
-      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      border-color: #000;
     }
     textarea {
       grid-column: 1 / -1;
@@ -148,119 +153,128 @@ export default async function handler(req, res) {
     }
     .button-group {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       grid-column: 1 / -1;
-      margin-top: 10px;
+      margin-top: 12px;
     }
     button {
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
+      padding: 10px 20px;
+      border: 1px solid #000;
+      border-radius: 0;
+      font-weight: 500;
       cursor: pointer;
-      font-size: 14px;
-      transition: all 0.3s;
+      font-size: 13px;
+      background: white;
+      color: #000;
+      transition: all 0.2s;
+      letter-spacing: 0.3px;
     }
     .btn-add {
-      background: #667eea;
-      color: white;
       flex: 1;
+      background: #000;
+      color: white;
+      border-color: #000;
     }
     .btn-add:hover {
-      background: #5568d3;
-      transform: translateY(-2px);
+      background: #333;
+      border-color: #333;
     }
     .btn-clear {
-      background: #e0e0e0;
-      color: #333;
       flex: 0.5;
+      background: white;
+      border-color: #d0d0d0;
+      color: #666;
     }
     .btn-clear:hover {
-      background: #d0d0d0;
+      background: #f5f5f5;
+      border-color: #000;
     }
     .items-list {
-      margin-top: 30px;
+      margin-top: 32px;
     }
     .item-row {
       display: grid;
       grid-template-columns: 1fr 150px 150px 100px;
-      gap: 10px;
-      padding: 12px;
-      background: #f8f9fa;
-      border-radius: 6px;
-      margin-bottom: 10px;
+      gap: 12px;
+      padding: 16px;
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 8px;
       align-items: center;
-      font-size: 14px;
+      font-size: 13px;
     }
     .item-name {
       font-weight: 500;
-      color: #333;
+      color: #000;
     }
     .btn-remove {
-      background: #ff6b6b;
-      color: white;
+      background: white;
+      color: #666;
       padding: 6px 12px;
-      border: none;
-      border-radius: 4px;
+      border: 1px solid #d0d0d0;
+      border-radius: 0;
       cursor: pointer;
       font-size: 12px;
+      transition: all 0.2s;
     }
     .btn-remove:hover {
-      background: #ff5252;
+      border-color: #000;
+      color: #000;
     }
     .submit-btn {
       width: 100%;
-      padding: 14px;
-      background: #764ba2;
+      padding: 12px;
+      background: #000;
       color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
+      border: 1px solid #000;
+      border-radius: 0;
+      font-weight: 500;
       cursor: pointer;
-      font-size: 16px;
-      margin-top: 20px;
-      transition: all 0.3s;
+      font-size: 13px;
+      margin-top: 24px;
+      transition: all 0.2s;
+      letter-spacing: 0.3px;
     }
     .submit-btn:hover {
-      background: #653a8a;
-      transform: translateY(-2px);
+      background: #333;
     }
     .submit-btn:disabled {
-      background: #ccc;
+      background: #d0d0d0;
+      border-color: #d0d0d0;
       cursor: not-allowed;
-      transform: none;
     }
     .results {
-      margin-top: 30px;
-      padding: 20px;
-      background: #f8f9fa;
-      border-radius: 8px;
+      margin-top: 32px;
+      padding: 24px;
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
       display: none;
     }
     .results.show {
       display: block;
     }
     .result-item {
-      padding: 10px;
+      padding: 12px;
       margin-bottom: 8px;
-      border-radius: 4px;
-      font-size: 14px;
+      border-radius: 0;
+      font-size: 13px;
+      border-left: 3px solid #000;
     }
     .result-success {
-      background: #d4edda;
-      color: #155724;
-      border-left: 4px solid #28a745;
+      background: #f0f0f0;
+      color: #000;
+      border-left-color: #000;
     }
     .result-error {
-      background: #f8d7da;
-      color: #721c24;
-      border-left: 4px solid #dc3545;
+      background: #fff0f0;
+      color: #000;
+      border-left-color: #d0d0d0;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>物品清單 - 批量新增</h1>
+    <h1>📋 物品清單 - 批量新增</h1>
     <p class="subtitle">一次輸入多件物品，自動新增到 Notion</p>
 
     <form id="itemForm">
@@ -298,21 +312,21 @@ export default async function handler(req, res) {
           <textarea id="notes" placeholder="備註..."></textarea>
         </div>
         <div class="button-group">
-          <button type="button" class="btn-add" onclick="addItem()">加入清單</button>
-          <button type="button" class="btn-clear" onclick="clearForm()">清除</button>
+          <button type="button" class="btn-add" onclick="addItem()">➕ 加入清單</button>
+          <button type="button" class="btn-clear" onclick="clearForm()">🗑️ 清除</button>
         </div>
       </div>
     </form>
 
     <div class="items-list">
-      <h3 style="color: #333; margin-bottom: 15px;" id="itemsTitle" style="display: none;">待新增項目</h3>
+      <h3 style="color: #3a3a3a; margin-bottom: 15px;" id="itemsTitle" style="display: none;">📝 待新增項目</h3>
       <div id="itemsList"></div>
     </div>
 
-    <button class="submit-btn" id="submitBtn" onclick="submitAll()" disabled>批量新增到 Notion</button>
+    <button class="submit-btn" id="submitBtn" onclick="submitAll()" disabled>🚀 批量新增到 Notion</button>
 
     <div class="results" id="results">
-      <h3 style="color: #333; margin-bottom: 15px;">新增結果</h3>
+      <h3 style="color: #3a3a3a; margin-bottom: 15px;">✨ 新增結果</h3>
       <div id="resultsList"></div>
     </div>
   </div>
@@ -369,7 +383,7 @@ export default async function handler(req, res) {
           </div>
           <div style="color: #666;">數量: \${item.quantity}</div>
           <div style="color: #666;">\${item.status || '未設定'}</div>
-          <button type="button" class="btn-remove" onclick="removeItem(\${item.id})">移除</button>
+          <button type="button" class="btn-remove" onclick="removeItem(\${item.id})">❌ 移除</button>
         </div>
       \`).join('');
     }
@@ -382,7 +396,7 @@ export default async function handler(req, res) {
     async function submitAll() {
       const btn = document.getElementById('submitBtn');
       btn.disabled = true;
-      btn.textContent = '新增中...';
+      btn.textContent = '⏳ 新增中...';
 
       const results = [];
       
@@ -401,7 +415,7 @@ export default async function handler(req, res) {
       items = [];
       renderItems();
       btn.disabled = false;
-      btn.textContent = '批量新增到 Notion';
+      btn.textContent = '🚀 批量新增到 Notion';
     }
 
     function renderResults(results) {
@@ -410,7 +424,7 @@ export default async function handler(req, res) {
 
       resultsList.innerHTML = results.map(result => \`
         <div class="result-item \${result.success ? 'result-success' : 'result-error'}">
-          \${result.message}
+          \${result.success ? '✅' : '❌'} \${result.message}
         </div>
       \`).join('');
 
