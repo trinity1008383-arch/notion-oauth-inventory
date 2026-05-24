@@ -260,7 +260,7 @@ export default async function handler(req, res) {
 </head>
 <body>
   <div class="container">
-    <h1>📋 物品清單 - 批量新增</h1>
+    <h1>物品清單 - 批量新增</h1>
     <p class="subtitle">一次輸入多件物品，自動新增到 Notion</p>
 
     <form id="itemForm">
@@ -298,8 +298,8 @@ export default async function handler(req, res) {
           <textarea id="notes" placeholder="備註..."></textarea>
         </div>
         <div class="button-group">
-          <button type="button" class="btn-add" onclick="addItem()">➕ 加入清單</button>
-          <button type="button" class="btn-clear" onclick="clearForm()">清空</button>
+          <button type="button" class="btn-add" onclick="addItem()">加入清單</button>
+          <button type="button" class="btn-clear" onclick="clearForm()">清除</button>
         </div>
       </div>
     </form>
@@ -309,7 +309,7 @@ export default async function handler(req, res) {
       <div id="itemsList"></div>
     </div>
 
-    <button class="submit-btn" id="submitBtn" onclick="submitAll()" disabled>🚀 批量新增到 Notion</button>
+    <button class="submit-btn" id="submitBtn" onclick="submitAll()" disabled>批量新增到 Notion</button>
 
     <div class="results" id="results">
       <h3 style="color: #333; margin-bottom: 15px;">新增結果</h3>
@@ -369,7 +369,7 @@ export default async function handler(req, res) {
           </div>
           <div style="color: #666;">數量: \${item.quantity}</div>
           <div style="color: #666;">\${item.status || '未設定'}</div>
-          <button type="button" class="btn-remove" onclick="removeItem(\${item.id})">刪除</button>
+          <button type="button" class="btn-remove" onclick="removeItem(\${item.id})">移除</button>
         </div>
       \`).join('');
     }
@@ -382,7 +382,7 @@ export default async function handler(req, res) {
     async function submitAll() {
       const btn = document.getElementById('submitBtn');
       btn.disabled = true;
-      btn.textContent = '⏳ 新增中...';
+      btn.textContent = '新增中...';
 
       const results = [];
       
@@ -401,7 +401,7 @@ export default async function handler(req, res) {
       items = [];
       renderItems();
       btn.disabled = false;
-      btn.textContent = '🚀 批量新增到 Notion';
+      btn.textContent = '批量新增到 Notion';
     }
 
     function renderResults(results) {
