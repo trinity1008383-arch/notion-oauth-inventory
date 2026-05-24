@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/oauth.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/oauth.js"
+    }
+  ],
+  "env": {
+    "NOTION_CLIENT_ID": "@notion_client_id",
+    "NOTION_CLIENT_SECRET": "@notion_client_secret"
+  }
+}
