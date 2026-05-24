@@ -8,6 +8,14 @@
   ],
   "routes": [
     {
+      "src": "/api/bulk_add",
+      "dest": "/api/bulk_add.js"
+    },
+    {
+      "src": "/api/oauth",
+      "dest": "/api/oauth.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "/api/index.js"
     }
